@@ -1,0 +1,16 @@
+body {
+  box-sizing: border-box;
+}
+
+.expitm {
+  background-color: rgb(85, 50, 114);
+  color: white;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 16px;
+  border: 4px solid rgb(231, 215, 185);
+  margin-bottom: 0.5rem;
+}

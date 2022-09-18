@@ -1,0 +1,16 @@
+.removebtn {
+    color: rgb(114, 54, 170);
+    background-color: white;
+    border-radius: 5px;
+    border: 2px solid rgb(243, 231, 210);
+    padding: 6px 10px;
+    font-size: 16px;
+    font-weight: bolder;
+    cursor: pointer;
+    
+}
+
+.removebtn:hover{
+    color: white;
+    background-color: rgb(255, 19, 19);
+}
