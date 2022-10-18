@@ -4,9 +4,8 @@ import Expense from './Components/Expense';
 import ExpenseForm from './ExpenseForm/ExpenseForm';
 
 const App = () => {
- 
-  let [newExpenses, setNewExpenses] = useState([]);
 
+  let [newExpenses, setNewExpenses] = useState([]);
   function fetchData() {
     fetch("https://apigenerator.dronahq.com/api/EKWGq6kG/data").then(
       (response) => {
@@ -35,20 +34,21 @@ const App = () => {
     }).then(() => {
       fetchData();
     })
-    
+
   }
 
+  let afterRemData = (remNewData) => {
+    setNewExpenses(remNewData);
+  }
 
   return (
 
     <>
       <h1> Expense Tracker </h1>
       <ExpenseForm exp={newExpenseFunction} />
-      <Expense expense={newExpenses} />
-
+      <Expense expense={newExpenses} getRemDataFromExp={afterRemData} />
     </>
   );
 }
 
 export default App;
-

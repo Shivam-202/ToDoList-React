@@ -15,6 +15,9 @@ let ExpenseItem = (props) => {
     //     newSetTitle(event.target.value);
     // }
 
+    let afterRemData = (remData) => {
+        props.getRemData(remData)
+    }
    
     return (
         <>
@@ -23,7 +26,7 @@ let ExpenseItem = (props) => {
                 <h2 className="title">{props.title}</h2>
                 <h2 className="amount">{"$" + props.amount}</h2>
                 
-                <RemoveItem expRemove={props.id} />
+                <RemoveItem expRemove={props.id} getafterRemData={afterRemData}/>
 
                 {/* <input type="text" value={newTitle} onChange={changeHandler} />
                 <button onClick={clickHandler}>Update</button> */}

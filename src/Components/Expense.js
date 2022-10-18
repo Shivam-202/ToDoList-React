@@ -5,10 +5,13 @@ import Card from '../UI/Card';
 
 const Expense = (props) => {
 
+    let afterRemDataFromExpItm = (itm) => {
+        props.getRemDataFromExp(itm)
+    }
+
     return (
         <>
             <Card className="expenseItm">
-
 
                 {
                     // Condition =>> ()?true:false;
@@ -22,6 +25,8 @@ const Expense = (props) => {
                                 title={expElem.title}
                                 amount={expElem.amount}
                                 id={expElem.id}
+
+                                getRemData = {afterRemDataFromExpItm}
                             />
                         )
                     )
