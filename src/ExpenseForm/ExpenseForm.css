@@ -20,6 +20,7 @@ form label {
 }
 
 form input {
+    background-color: rgb(255, 254, 251);
     padding: 4px;
     font-size: 1rem;
     margin-bottom: 2rem;
